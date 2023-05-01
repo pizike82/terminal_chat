@@ -1,6 +1,6 @@
 # Client Side Chat Room
 
-import socket, threading
+import socket, threading, time
 
 # Define Constants to be used
 DEST_IP = socket.gethostbyname(socket.gethostname())
@@ -46,4 +46,5 @@ send_thread = threading.Thread(target=send_message)
 
 # Start the client
 recieve_thread.start()
+time.sleep(3)
 send_thread.start()
